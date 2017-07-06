@@ -1,3 +1,5 @@
+//https://www.codechef.com/problems/TACHEMIS
+//medium
 #include <bits/stdc++.h>
 using namespace std;
 template <class T> int size(const T &x) { return x.size(); }
@@ -84,7 +86,7 @@ int main(){
 								}
 								p++;
 							}
-							
+
 						} 
 				}
 			}
