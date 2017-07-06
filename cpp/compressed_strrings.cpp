@@ -81,6 +81,9 @@ int main(){
 									if(compress[j-p].first == compress[j+p].first)
 									{
 										result +=min(compress[j-p].second,compress[j+p].second);
+										//if size is not same no need to check further!!
+										if(compress[j-p].second != compress[j+p].second)
+											flag = 1;
 									}
 									else
 										flag = 1;
