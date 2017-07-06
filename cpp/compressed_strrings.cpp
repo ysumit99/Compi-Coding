@@ -77,9 +77,9 @@ int main(){
 								}
 								else
 								{
-									if(compress[j-1].first == compress[j+1].first)
+									if(compress[j-p].first == compress[j+p].first)
 									{
-										result +=min(compress[j-1].second,compress[j+1].second);
+										result +=min(compress[j-p].second,compress[j+p].second);
 									}
 									else
 										flag = 1;
