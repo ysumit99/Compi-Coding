@@ -1,6 +1,6 @@
 //https://www.codechef.com/problems/TACHEMIS
 //medium
-//not yet accepted on codechef (but pretty sure my logic isn't flawed and there's some corner case ,I am missing!)
+//not yet accepted on codechef
 #include <bits/stdc++.h>
 using namespace std;
 template <class T> int size(const T &x) { return x.size(); }
@@ -20,6 +20,7 @@ typedef vector<vi> vvi;
 typedef vector<vii> vvii;
 template <class T> T smod(T a, T b) {
 	return (a % b + b) % b; }
+vii compress;
 	
 int main(){
 	
@@ -32,10 +33,12 @@ int main(){
 	int ele;//stores the number of occurences of a  char
 	char ch;//stores the char
 
+	
 	while(t--)
 	{
-		vii compress;//vector of pairs to stores compressed string
-		vi length;
+		//vii compress;//vector of pairs to stores compressed string
+		//vi length;
+		compress.clear();
 		
 		cin>>k;
 
@@ -95,6 +98,7 @@ int main(){
 				}
 			}
 			cout<<result<<endl;
+
 
 	}
 	
