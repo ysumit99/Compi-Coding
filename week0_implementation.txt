@@ -1,4 +1,4 @@
-http://codeforces.com/problemset/problem/822/A  
+http://codeforces.com/problemset/problem/822/A  🏅😁
 (Easy)
 
 https://www.codechef.com/problems/SEAPAIR 
@@ -13,5 +13,9 @@ https://www.hackerrank.com/challenges/sherlock-and-array
 https://www.hackerrank.com/challenges/knightl-on-chessboard 
 (Medium)
 
-https://www.codechef.com/problems/ANUUND 
+https://www.codechef.com/problems/ANUUND 🏅😁
 (Very Easy)
+
+3N + 1 (easy)
+
+Minesweeper (easy) *question @repo

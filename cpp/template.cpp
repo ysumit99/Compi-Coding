@@ -15,6 +15,16 @@ typedef long long ll;
 const int INF = ~(1<<31); // large value to bound checking
 
 const double EPS = 1e-9;  //Never check == for floats, always compare < or > 
+
+/*
+	float a = 1.0, b = 1.0;
+	if (a - b) < EPS 
+ 	// To do When EQUAL
+	else
+	// To do When ~EQUAL 
+*/
+
+
 const double pi = acos(-1);
 typedef unsigned long long ull;
 typedef vector<vi> vvi;
@@ -26,6 +36,8 @@ int main(){
 	
 	ios_base :: sync_with_stdio(false);
 	cin.tie (0); // faster i/o
+	
+		
 		
 	return 0;
 }
