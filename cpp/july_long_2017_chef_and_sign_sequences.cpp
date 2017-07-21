@@ -1,4 +1,5 @@
 //https://www.codechef.com/JULY17/problems/CHEFSIGN
+//logic incorrect but passes some of the test cases !! see july_long_2017_chef_and_sign_sequences2.cpp for correct solution
 #include <bits/stdc++.h>
 using namespace std;
 template <class T> int size(const T &x) { return x.size(); }
