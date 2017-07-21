@@ -1,0 +1,5 @@
+1.Problem A. Ambiguous Cipher (Kickstart round C - 2017)
+https://code.google.com/codejam/contest/4344486/
+
+2.Problem A. Go Sightseeing (Kickstart round D - 2017)
+https://code.google.com/codejam/contest/8284487/
