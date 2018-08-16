@@ -1,3 +1,4 @@
+//https://www.codechef.com/PROC2018/problems/PROC18A
 #include<bits/stdc++.h>
 
 using namespace std;
