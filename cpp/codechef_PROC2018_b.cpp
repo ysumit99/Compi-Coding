@@ -14,45 +14,37 @@ int main(int argc, char const *argv[])
 
 	cin>>t;
 
-	
-		
 
 	while(t--)
 	{
 		int n;
 
-		float temp = 0.00, sum = 0.00;
+		double  sum;
 
 		cin>>n;
 
-		long long int ele;
+		double ele;
 
-		std::vector<long long int> v;
+		std::vector<double> v(n);
 
-		for (int i = 0; i < n; ++i)
-		{
-			cin>>ele;
-
-
-			v.push_back(ele);
-		}
+			for (int i = 0; i < n; ++i)
+			{
+				cin>>v[i];
+				
+			}
 
 		sort(v.rbegin(), v.rend());
 
-		
-			sum = ( ((float)v[0])/2.0000000000 + ((float)v[1])/2.0000000000  );;
-			cout<<sum<<"\n";
+			
+		sum = (v[0] + v[1])/2;
+
+			
 			for (int i = 2; i < n; i++)
-			{
-				
-					sum = ( sum/2.0 + ((float)v[i])/2.0  );
-					cout<<sum<<"\n";
-				//sum += t
-			}
-
-		
-
-		printf("%.10f\n",sum);
+				{
+					sum = (v[i] + sum)/2;
+				}
+					
+		cout<< setprecision(8) << fixed << sum << endl;
 
 
 
