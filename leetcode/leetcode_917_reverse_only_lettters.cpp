@@ -18,11 +18,11 @@ public:
         	ele = S[i];
 
         	if(ele >= 65 && ele <= 90 )
-        		alpha_string += S[i];// needs to stay in the original position
+        		alpha_string += S[i];
         	else if( ele >= 97 && ele <= 122 )
         		alpha_string += S[i];
         	else
-        		arr[i] = 1;
+        		arr[i] = 1; // needs to stay in the original position
         		
         }
 
