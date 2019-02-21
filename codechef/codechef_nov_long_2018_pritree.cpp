@@ -18,9 +18,9 @@ int main(int argc, char const *argv[])
 
     }
 
-    for (int i = 0; i < n-1; i+=2)
+    for (int i = 0; i < n-1; i++)
     {
-    	cout << i+1 << " " << i+2 << "\n" << i+2 << " " << i+3
+    	cout << i+1 << " " << i+2 << "\n" ;
     }
 
 	return 0;
