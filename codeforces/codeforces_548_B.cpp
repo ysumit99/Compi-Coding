@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 	cin >> n;
 
 
-	std::vector<int> v(n);
+	std::vector<long long int> v(n);
 
 
 	for (int i = 0; i < n; ++i)
@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 	}
 
 
-	int res = 0;
+	long long int res = 0;
 
 	for (int i = n - 1; i >= 0 ; --i)
 	{
@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
 				res += v[i];
 				continue;
 			}
-			
+
 		if(v[i] < v[i+1])
 			{
 				res += v[i];
