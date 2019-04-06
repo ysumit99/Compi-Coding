@@ -17,8 +17,15 @@ int main(int argc, char const *argv[])
 	{
 		for(int j = i + 1; j <= str.length(); j++)
 		{
+			cout << "*********************end*********" << endl;
+			cout <<  "looking for this substr: " << str.substr(i,j - i) << endl;
+			cout << "************ Elements in vector ******** " << endl;
+			for (int k = 0; k < v.size(); ++k)
+			{
+				cout << v[k] << " " ;
+			}
 
-			//cout << str.substr(i,j - i) << endl;
+			cout << endl;
 
 			for(int k = 0; k < v.size(); k++)
 			{
