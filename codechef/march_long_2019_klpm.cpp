@@ -3,6 +3,18 @@
 
 using namespace std;
 
+bool ispalindrome(string str)
+{
+	int len = str.length();
+	for (int i = 0; i < len; ++i)
+	{
+		if(str[i] != str[len - 1 - i] )
+			return false;
+	}
+
+	return true;
+}
+
 int main(int argc, char const *argv[])
 {
 	string str;
@@ -11,67 +23,31 @@ int main(int argc, char const *argv[])
 	cin >> str;
 	std::vector<string> v;
 	string str1, str2, str3;
-	int flag = 0, len2;
+	int flag = 0, len2, len = str.length();
 
-	for(int i = 0; i < str.length(); i++)
+	for(int i = 0; i < len; i++)
 	{
-		for(int j = i + 1; j <= str.length(); j++)
+		for(int j = i + 1; j <= len; j++)
 		{
-			cout << "*********************end*********" << endl;
-			cout <<  "looking for this substr: " << str.substr(i,j - i) << endl;
-			cout << "************ Elements in vector ******** " << endl;
-			for (int k = 0; k < v.size(); ++k)
+			//cout << "*********************end*********" << endl;
+			//cout <<  str.substr(i,j - i) << endl;
+			v.clear();
+			cout << "Iteration" << endl;
+			for(int k = len - j; k < len; k++)
 			{
-				cout << v[k] << " " ;
-			}
-
-			cout << endl;
-
-			for(int k = 0; k < v.size(); k++)
-			{
-			    cout << "substring = " << str.substr(i,j - i);
-			    cout << " vector size till now = " << v.size();
-				str1 = str.substr(i,j - i);
-				str2 = v[k];
-				str3 = str1 + str2;
-				flag = 0;
-				len2 = str3.length();
-				//check for palindrome
-				for(int l = 0; l < len2/2; l++)
+				for(int l = k + 1; l <= len; l++)
 				{
-					if(str3[l] != str3[len2 - l - 1])
-					{
-						flag = 1 ;//not palindrome
-						break;
-					}
+					//if(ispalindrome(str.substr(i,j - i) + str.substr(k,l - k)))
+						//res++;
+					//v.push_back(str.substr(k,l - k));
+					cout << str.substr(k,l - k) << endl;
 				}
-
-				if(flag == 0) //palindrome no need to check other combination
-					res++;
-				else
-				{
-					flag = 0;
-					str3 = str2 + str1;
-
-					for(int l = 0; l < len2/2; l++)
-					{
-						if(str3[l] != str3[len2 - l - 1])
-						{
-							flag = 1; //not palindrome
-							break;
-						}
-					}
-					if(flag == 0) 
-					res++;
-
-				}
-				
-				cout  << " count of palindrome = " << res << endl;
 			}
-
-			v.push_back(str.substr(i,j - i));
+			cout << " end of Iteration" << endl;
+			//v.push_back(str.substr(i,j - i));
 		}
 	}
+
 
 	cout << res;
 	return 0;
