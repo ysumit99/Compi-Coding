@@ -1,122 +1,55 @@
 //https://www.codechef.com/APRIL19B/problems/SUBREM
+//subtree removal
 #include<bits/stdc++.h>
-
+#define ll long long int
 using namespace std;
+vector<ll>adj[100005];
+ll a[100005];
+ll dp[100005];
+ll visited[100005];
+ll n,x;
 
-
-
-int main(int argc, char const *argv[])
+void dfs(ll u)
 {
-	
-	ios_base :: sync_with_stdio(false);
-	cin.tie (0);
+    visited[u]=true;
+    dp[u]=a[u];
+	ll sum=a[u];
+	for(ll child : adj[u])
+	{
+	    if(!visited[child])
+	    {	
+	        dfs(child);
+		    sum+=dp[child];
+	    }
+	}
+	if(sum<-x)
+	dp[u]=-x;
+	else
+	dp[u]=sum;
+}
 
-	int t,u,v;
-	long long int n,x,cost, res;
-	std::vector<long long int>::iterator itr;
-/*	std::vector< pair <int, int> >::iterator itr2;*/
-	int pos;
-
+int main()
+{
+	int t;
 	cin >> t;
-
 	while(t--)
 	{
-		
-		cost = 0;
-		cin >> n >> x;
-		std::vector<long long int> value(n);
-		std::vector<pair<int, int> > edge;
-		int parent[n] = {0}; //contains parent of each node
-
-		for (int i = 0; i < n; ++i)
-			cin >> value[i];
-			
-		std::vector<std::vector<int>> mapping(n, std::vector<int>());
-			
-    	for (int i = 0; i < n -1; ++i)
+		cin >> n >> x;	
+		memset(a,0,sizeof(a));
+		memset(dp,0,sizeof(dp));
+		memset(visited,false,sizeof(visited));
+		memset(adj,0,sizeof(adj));
+		for(int i=1;i<=n;i++)
+		cin >> a[i];
+		ll u,v;
+		for(int i=1;i<=n-1;i++)
 		{
 			cin >> u >> v;
-			edge.push_back(make_pair(u, v));
-			mapping[u-1].push_back(v);
-			parent[v-1] = u-1;
-			
-		} 
-
-		sort(edge.rbegin(), edge.rend());
-
-		
-		/*for (int i = 0; i < edge.size() ; ++i)
-		{
-			cout << edge[i].first << " " << edge[i].second << endl;
+			adj[u].push_back(v);
+			adj[v].push_back(u);
 		}
-		
-*/  
-       /* cout << "****************************" << endl;
-		 for(int i = 0; i < n; i++)
-	      {
-	        
-	          for(int j = 0; j < mapping[i].size(); j++)
-	          {
-	              cout << mapping[i][j] <<  " ";
-	          }
-	          cout << endl;
-	      }
-
-		 cout << "****************************" << endl;*/
-
-
-
-		for (int i = 0; i < n - 1; ++i)
-		{
-			value[edge[i].first - 1] += value[edge[i].second - 1];
-		}
-
-		/*for (int i = 0; i < n ; ++i)
-		{
-			cout << value[i] << " ";
-		}*/
-
-		res = value[0];
-		while(true)
-		{
-			itr = std::min_element(std::begin(value), std::end(value));
-    		//cout << "min = " << *itr << endl;
-    		if(*itr >= 0)
-    			break;
-    		//position of smallest value;
-    		pos = distance(std::begin(value), itr);
-    		//cout << "pos = " << pos << endl;
-    		cost += x;
-    		//cout << "cost = " << cost << endl;
-    		if((*itr * -1) - cost <= 0)
-    			break;
-    		res += (*itr * -1) - cost;
-    		//cout << "res = " << res << endl;
-    		//cout << "parent =  " << parent[pos] << endl;
-    		value[parent[pos]] -= *itr;
-    		//cout << "value[parent[" <<pos << "]] = " << value[parent[pos]] << endl;
-    		
-    		value[pos] = 0;
-
-    		if(pos == 0)
-    			break;
-    		//make values = 0 for all children of vertex ""
-    		for(int i = 0 ; i < mapping[pos].size(); i++)
-    		{
-    			value[mapping[pos][i] - 1] = 0;
-    			//cout << "value zero for " << 	value[mapping[pos][i] - 1] << endl;
-    		}
-
-
-    	}
-
-		//cout << "res = " << res;
-    	cout << res << endl;
-	
-
+		dfs(1);
+		cout << dp[1] << endl;
 	}
-	
-
-	
 	return 0;
 }
