@@ -1,5 +1,5 @@
 //https://www.codechef.com/COOK105B/problems/PEWDSVTS
-//Not Correct
+/*//Not Correct
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -111,4 +111,93 @@ int main()
     }
 
     return 0;
+}*/
+
+//Accepted
+#include<bits/stdc++.h>
+using namespace std;
+#define fast ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0)
+#define ll long long int
+
+#define vec vector < int >
+#define vecp vector < pair < int , int > >
+#define ff first
+#define ss second
+#define pb push_back
+#define mp make_pair
+#define debug(x)   cerr<<#x<<": "<<x<<endl
+#define pii pair < int , int >
+#define pll pair < ll , ll > 
+#define fr(i , a , b) for(int  i = a ; i <= b ; i++)
+#define all(v) v.begin() , v.end()
+#define mod  1000000007
+#define N 100005
+#define mod1 1000000007
+#define mod2 1000000009
+#define bitcnt __builtin_popcount
+#define PI acos(-1)
+#define endl "\n" 
+#define mid  (s+e)/2
+#define MAX 1000006
+const ll inf = (ll)1e18 + 10;
+ll c[N];
+priority_queue < int > q;
+signed  main(){
+  fast;
+  //freopen("input.txt" , "r" , stdin);
+  //freopen("output.txt" , "w" , stdout);
+  
+  ll t , n , a , b , x , y , z , ans;
+  ll da , db , need;
+  cin>>t;
+  while(t--){
+  	ans = 0;
+  	cin>>n >>a >>b >>x >>y >>z;
+  	for(int i = 1 ; i<=n ; i++)
+  	   cin>>c[i] , q.push(c[i]);
+  
+    da = (z-a)/x;
+    if((z-a)%x > 0) da++;
+    
+    db = (z - b)/y;
+    if((z-b)%y > 0) db++;
+    
+    if(da < db){
+    	cout<<"0\n";
+    	while(q.size() > 0) q.pop();
+    	continue;
+	}
+	
+	need = z - (a + (db-1) * x);
+	while(need > 0 && q.size() > 0){
+		int k = q.top();
+		q.pop();
+		need -= k;
+		ans++;
+		if(k/2 > 0)
+		q.push(k/2);
+	}
+	
+	if(need <= 0)
+		cout<<ans<<endl;
+		
+	
+	else
+		cout<<"RIP\n";
+	
+	while(q.size() > 0) q.pop();
+	
+   }
+   return 0;
 }
+
+
+
+
+
+
+
+
+
+
+ 
