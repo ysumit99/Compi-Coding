@@ -30,7 +30,7 @@ int main() {
 				cin >> v[i];
 
 			}
-			long long int min,sum = 0,ele;
+			long long int min,sum = 0,ele,max = 0;
 			for (int i = 0; i < n; ++i)
 			{
 				long long int temp = v[i];
@@ -52,9 +52,13 @@ int main() {
 					min = sum;
 				if(sum < min)
 					min = sum;
+				if(sum > max)
+					max = sum;
 			}
 
 			cout << "min = " <<  min << endl;
+			cout << "max = " <<  max << endl;
+
 		}
 
 	return 0;
