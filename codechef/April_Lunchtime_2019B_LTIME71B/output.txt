@@ -1,0 +1,31 @@
+v[1] = 0 | diff = -11
+v[2] = 26 | diff = 9
+v[3] = 25 | diff = 7
+v[4] = 24 | diff = 5
+v[5] = 29 | diff = 7
+sum = 104
+v[1] = 26 | diff = 15
+v[2] = 0 | diff = -17
+v[3] = 3 | diff = -15
+v[4] = 2 | diff = -17
+v[5] = 7 | diff = -15
+sum = 38
+v[1] = 25 | diff = 14
+v[2] = 3 | diff = -14
+v[3] = 0 | diff = -18
+v[4] = 1 | diff = -18
+v[5] = 4 | diff = -18
+sum = 33
+v[1] = 24 | diff = 13
+v[2] = 2 | diff = -15
+v[3] = 1 | diff = -17
+v[4] = 0 | diff = -19
+v[5] = 5 | diff = -17
+sum = 32
+v[1] = 29 | diff = 18
+v[2] = 7 | diff = -10
+v[3] = 4 | diff = -14
+v[4] = 5 | diff = -14
+v[5] = 0 | diff = -22
+sum = 45
+min = 32
