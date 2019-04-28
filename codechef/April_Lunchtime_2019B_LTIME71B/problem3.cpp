@@ -1,6 +1,73 @@
 //https://www.codechef.com/LTIME71B/problems/MINARRS
-//Partially Accepted (Brute Force)
+//Accepted
 #include<bits/stdc++.h>
+
+using namespace std;
+
+#define ll long long int
+
+int main() {
+#ifdef DEBUG
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+#endif
+	ios_base :: sync_with_stdio(false);
+	cin.tie (0);
+
+	int t;
+
+	cin >> t;
+	int n;
+
+	
+	while(t--)
+		{
+			cin >> n;
+			std::vector<int> v(n);
+
+			for (int i = 0; i < n; ++i)
+			{
+				cin >> v[i];
+
+			}
+
+
+			
+
+			ll sum = 0, x = 1;
+			int  set_count, notset_count;
+
+			
+			for (int i = 0; i <= 30; ++i)
+			{
+				set_count = 0;
+				notset_count = 0;
+
+				for (int j = 0; j < n; ++j)
+				{
+					if((v[j] & (x << i)) == 0)
+						notset_count++;
+					else
+						set_count++;
+				}
+
+				if(set_count > notset_count)
+					sum += notset_count * (x << i);
+				else
+					sum += set_count * (x << i);
+				
+			}
+
+			cout << sum << endl;
+
+		}
+
+	return 0;
+}
+
+
+//Partially Accepted (Brute Force)
+/*#include<bits/stdc++.h>
 
 using namespace std;
 
@@ -34,11 +101,11 @@ int main() {
 			for (int i = 0; i < n; ++i)
 			{
 				long long int temp = v[i];
-				/*for (int j = 0; j < n; ++j)
+				for (int j = 0; j < n; ++j)
 				{
 					v2[j] = v[j];
 					
-				}*/
+				}
 				sum = 0;
 				for (int j = 0; j < n; ++j)
 				{
@@ -62,4 +129,5 @@ int main() {
 		}
 
 	return 0;
-}
+}*/
+
