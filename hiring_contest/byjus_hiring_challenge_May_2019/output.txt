@@ -1,0 +1,101 @@
+temp = 1
+case1: i = 0 k = 0 i + k = 0 j = 0 temp - k = 1j + temp - k = 1
+case1: i = 0 k = 1 i + k = 1 j = 0 temp - k = 0j + temp - k = 0
+case2: i = 0 k = 0i - k = 0 j = 0temp - k = 1 j + temp - k = 1
+case3 : i = 0 k = 1 i+ k = 1 j = 0 temp - k = 0 j - temp + k =0
+temp = 2
+case1: i = 0 k = 0 i + k = 0 j = 1 temp - k = 2j + temp - k = 3
+case1: i = 0 k = 1 i + k = 1 j = 1 temp - k = 1j + temp - k = 2
+case1: i = 0 k = 2 i + k = 2 j = 1 temp - k = 0j + temp - k = 1
+case2: i = 0 k = 0i - k = 0 j = 1temp - k = 2 j + temp - k = 3
+case3 : i = 0 k = 1 i+ k = 1 j = 1 temp - k = 1 j - temp + k =0
+case3 : i = 0 k = 2 i+ k = 2 j = 1 temp - k = 0 j - temp + k =1
+temp = 1
+case1: i = 0 k = 0 i + k = 0 j = 2 temp - k = 1j + temp - k = 3
+case1: i = 0 k = 1 i + k = 1 j = 2 temp - k = 0j + temp - k = 2
+case2: i = 0 k = 0i - k = 0 j = 2temp - k = 1 j + temp - k = 3
+case3 : i = 0 k = 0 i+ k = 0 j = 2 temp - k = 1 j - temp + k =1
+case3 : i = 0 k = 1 i+ k = 1 j = 2 temp - k = 0 j - temp + k =2
+case4 : i = 0 k = 0i - k = 0  j = 2 temp - k = 1 j - temp + k1
+temp = 0
+case1: i = 0 k = 0 i + k = 0 j = 3 temp - k = 0j + temp - k = 3
+case2: i = 0 k = 0i - k = 0 j = 3temp - k = 0 j + temp - k = 3
+case3 : i = 0 k = 0 i+ k = 0 j = 3 temp - k = 0 j - temp + k =3
+case4 : i = 0 k = 0i - k = 0  j = 3 temp - k = 0 j - temp + k3
+temp = 0
+case1: i = 1 k = 0 i + k = 1 j = 0 temp - k = 0j + temp - k = 0
+case2: i = 1 k = 0i - k = 1 j = 0temp - k = 0 j + temp - k = 0
+case3 : i = 1 k = 0 i+ k = 1 j = 0 temp - k = 0 j - temp + k =0
+case4 : i = 1 k = 0i - k = 1  j = 0 temp - k = 0 j - temp + k0
+temp = 1
+case1: i = 1 k = 0 i + k = 1 j = 1 temp - k = 1j + temp - k = 2
+case1: i = 1 k = 1 i + k = 2 j = 1 temp - k = 0j + temp - k = 1
+case2: i = 1 k = 0i - k = 1 j = 1temp - k = 1 j + temp - k = 2
+case2: i = 1 k = 1i - k = 0 j = 1temp - k = 0 j + temp - k = 1
+case3 : i = 1 k = 0 i+ k = 1 j = 1 temp - k = 1 j - temp + k =0
+case3 : i = 1 k = 1 i+ k = 2 j = 1 temp - k = 0 j - temp + k =1
+case4 : i = 1 k = 0i - k = 1  j = 1 temp - k = 1 j - temp + k0
+case4 : i = 1 k = 1i - k = 0  j = 1 temp - k = 0 j - temp + k1
+temp = 2
+case1: i = 1 k = 1 i + k = 2 j = 2 temp - k = 1j + temp - k = 3
+case1: i = 1 k = 2 i + k = 3 j = 2 temp - k = 0j + temp - k = 2
+case2: i = 1 k = 1i - k = 0 j = 2temp - k = 1 j + temp - k = 3
+case3 : i = 1 k = 0 i+ k = 1 j = 2 temp - k = 2 j - temp + k =0
+case3 : i = 1 k = 1 i+ k = 2 j = 2 temp - k = 1 j - temp + k =1
+case3 : i = 1 k = 2 i+ k = 3 j = 2 temp - k = 0 j - temp + k =2
+case4 : i = 1 k = 0i - k = 1  j = 2 temp - k = 2 j - temp + k0
+case4 : i = 1 k = 1i - k = 0  j = 2 temp - k = 1 j - temp + k1
+temp = 3
+case3 : i = 1 k = 0 i+ k = 1 j = 3 temp - k = 3 j - temp + k =0
+case3 : i = 1 k = 1 i+ k = 2 j = 3 temp - k = 2 j - temp + k =1
+case3 : i = 1 k = 2 i+ k = 3 j = 3 temp - k = 1 j - temp + k =2
+case4 : i = 1 k = 0i - k = 1  j = 3 temp - k = 3 j - temp + k0
+case4 : i = 1 k = 1i - k = 0  j = 3 temp - k = 2 j - temp + k1
+temp = 3
+case1: i = 2 k = 0 i + k = 2 j = 0 temp - k = 3j + temp - k = 3
+case1: i = 2 k = 1 i + k = 3 j = 0 temp - k = 2j + temp - k = 2
+case2: i = 2 k = 0i - k = 2 j = 0temp - k = 3 j + temp - k = 3
+case2: i = 2 k = 1i - k = 1 j = 0temp - k = 2 j + temp - k = 2
+case2: i = 2 k = 2i - k = 0 j = 0temp - k = 1 j + temp - k = 1
+temp = 3
+case1: i = 2 k = 1 i + k = 3 j = 1 temp - k = 2j + temp - k = 3
+case2: i = 2 k = 1i - k = 1 j = 1temp - k = 2 j + temp - k = 3
+case2: i = 2 k = 2i - k = 0 j = 1temp - k = 1 j + temp - k = 2
+case4 : i = 2 k = 2i - k = 0  j = 1 temp - k = 1 j - temp + k0
+temp = 1
+case1: i = 2 k = 0 i + k = 2 j = 2 temp - k = 1j + temp - k = 3
+case1: i = 2 k = 1 i + k = 3 j = 2 temp - k = 0j + temp - k = 2
+case2: i = 2 k = 0i - k = 2 j = 2temp - k = 1 j + temp - k = 3
+case2: i = 2 k = 1i - k = 1 j = 2temp - k = 0 j + temp - k = 2
+case3 : i = 2 k = 0 i+ k = 2 j = 2 temp - k = 1 j - temp + k =1
+case3 : i = 2 k = 1 i+ k = 3 j = 2 temp - k = 0 j - temp + k =2
+case4 : i = 2 k = 0i - k = 2  j = 2 temp - k = 1 j - temp + k1
+case4 : i = 2 k = 1i - k = 1  j = 2 temp - k = 0 j - temp + k2
+temp = 5
+case4 : i = 2 k = 2i - k = 0  j = 3 temp - k = 3 j - temp + k0
+temp = 0
+case1: i = 3 k = 0 i + k = 3 j = 0 temp - k = 0j + temp - k = 0
+case2: i = 3 k = 0i - k = 3 j = 0temp - k = 0 j + temp - k = 0
+case3 : i = 3 k = 0 i+ k = 3 j = 0 temp - k = 0 j - temp + k =0
+case4 : i = 3 k = 0i - k = 3  j = 0 temp - k = 0 j - temp + k0
+temp = 0
+case1: i = 3 k = 0 i + k = 3 j = 1 temp - k = 0j + temp - k = 1
+case2: i = 3 k = 0i - k = 3 j = 1temp - k = 0 j + temp - k = 1
+case3 : i = 3 k = 0 i+ k = 3 j = 1 temp - k = 0 j - temp + k =1
+case4 : i = 3 k = 0i - k = 3  j = 1 temp - k = 0 j - temp + k1
+temp = 1
+case1: i = 3 k = 0 i + k = 3 j = 2 temp - k = 1j + temp - k = 3
+case2: i = 3 k = 0i - k = 3 j = 2temp - k = 1 j + temp - k = 3
+case2: i = 3 k = 1i - k = 2 j = 2temp - k = 0 j + temp - k = 2
+case3 : i = 3 k = 0 i+ k = 3 j = 2 temp - k = 1 j - temp + k =1
+case4 : i = 3 k = 0i - k = 3  j = 2 temp - k = 1 j - temp + k1
+case4 : i = 3 k = 1i - k = 2  j = 2 temp - k = 0 j - temp + k2
+temp = 0
+case1: i = 3 k = 0 i + k = 3 j = 3 temp - k = 0j + temp - k = 3
+case2: i = 3 k = 0i - k = 3 j = 3temp - k = 0 j + temp - k = 3
+case3 : i = 3 k = 0 i+ k = 3 j = 3 temp - k = 0 j - temp + k =3
+case4 : i = 3 k = 0i - k = 3  j = 3 temp - k = 0 j - temp + k3
+2 9 1 9 
+13 0 8 1 
+0 8 2 5 
+4 6 6 7 
