@@ -1,0 +1,78 @@
+for i =  0 | v[i] already counted 
+v[j] already counted | i = 1 | j = 0
+Comparing Same Value | i = 1 | j = 1
+sum = 3 | count = 1 | i = 1 | j = 2
+v[j] already counted | i = 1 | j = 3
+sum not multiple of 3i = 1 | j = 4
+for  i = 1 => count = 1 | max = 1
+v[j] already counted | i = 2 | j = 0
+sum = 3 | count = 1 | i = 2 | j = 1
+Comparing Same Value | i = 2 | j = 2
+v[j] already counted | i = 2 | j = 3
+sum not multiple of 3i = 2 | j = 4
+for  i = 2 => count = 1 | max = 1
+for i =  3 | v[i] already counted 
+v[j] already counted | i = 4 | j = 0
+sum not multiple of 3i = 4 | j = 1
+sum = 3 | count = 1 | i = 4 | j = 2
+v[j] already counted | i = 4 | j = 3
+Comparing Same Value | i = 4 | j = 4
+for  i = 4 => count = 1 | max = 1
+***** count_multiple_3 = 2 max = 1
+Comparing Same Value | i = 0 | j = 0
+sum not multiple of 3i = 0 | j = 1
+sum not multiple of 3i = 0 | j = 2
+sum not multiple of 3i = 0 | j = 3
+sum not multiple of 3i = 0 | j = 4
+sum = 3 | count = 1 | i = 0 | j = 5
+sum not multiple of 3i = 0 | j = 6
+for  i = 0 => count = 1 | max = 1
+sum not multiple of 3i = 1 | j = 0
+Comparing Same Value | i = 1 | j = 1
+sum not multiple of 3i = 1 | j = 2
+sum not multiple of 3i = 1 | j = 3
+sum not multiple of 3i = 1 | j = 4
+sum = 3 | count = 1 | i = 1 | j = 5
+sum not multiple of 3i = 1 | j = 6
+for  i = 1 => count = 1 | max = 1
+sum not multiple of 3i = 2 | j = 0
+sum not multiple of 3i = 2 | j = 1
+Comparing Same Value | i = 2 | j = 2
+sum not multiple of 3i = 2 | j = 3
+sum not multiple of 3i = 2 | j = 4
+sum = 3 | count = 1 | i = 2 | j = 5
+sum not multiple of 3i = 2 | j = 6
+for  i = 2 => count = 1 | max = 1
+sum not multiple of 3i = 3 | j = 0
+sum not multiple of 3i = 3 | j = 1
+sum not multiple of 3i = 3 | j = 2
+Comparing Same Value | i = 3 | j = 3
+sum not multiple of 3i = 3 | j = 4
+sum = 3 | count = 1 | i = 3 | j = 5
+sum not multiple of 3i = 3 | j = 6
+for  i = 3 => count = 1 | max = 1
+sum not multiple of 3i = 4 | j = 0
+sum not multiple of 3i = 4 | j = 1
+sum not multiple of 3i = 4 | j = 2
+sum not multiple of 3i = 4 | j = 3
+Comparing Same Value | i = 4 | j = 4
+sum = 3 | count = 1 | i = 4 | j = 5
+sum not multiple of 3i = 4 | j = 6
+for  i = 4 => count = 1 | max = 1
+sum = 3 | count = 1 | i = 5 | j = 0
+sum not multiple of 3i = 5 | j = 1
+sum not multiple of 3i = 5 | j = 2
+sum not multiple of 3i = 5 | j = 3
+sum not multiple of 3i = 5 | j = 4
+Comparing Same Value | i = 5 | j = 5
+sum not multiple of 3i = 5 | j = 6
+for  i = 5 => count = 1 | max = 1
+sum = 3 | count = 1 | i = 6 | j = 0
+sum not multiple of 3i = 6 | j = 1
+sum not multiple of 3i = 6 | j = 2
+sum not multiple of 3i = 6 | j = 3
+sum not multiple of 3i = 6 | j = 4
+sum not multiple of 3i = 6 | j = 5
+Comparing Same Value | i = 6 | j = 6
+for  i = 6 => count = 1 | max = 1
+***** count_multiple_3 = 0 max = 1
