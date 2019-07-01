@@ -1,4 +1,5 @@
 //http://codeforces.com/contest/1187/problem/A
+//Accepted
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -23,15 +24,8 @@ int main()
 
         cin >> n >> s >> t;
 
-        int min_ele = min(s, t);
-        int max_ele = max(s, t);
+        res = n - min(s, t) + 1;
 
-        if (min_ele == n)
-            res = 1;
-        else
-        {
-            res = max(min_ele, n - min_ele + 1);
-        }
         cout << res << "\n";
     }
     return 0;
