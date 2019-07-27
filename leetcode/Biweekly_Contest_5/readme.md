@@ -45,7 +45,7 @@ _Note:_
 
 > O(N)
 
-**Note** Refer [largestUniqueNumber.cpp](../largestUniqueNumber.cpp) for code
+**Note** Refer [largestUniqueNumber.cpp](https://github.com/ysumit99/Compi-Coding/blob/master/leetcode/Biweekly_Contest_5/largestUniqueNumber.cpp) for code
 
 ***
 
