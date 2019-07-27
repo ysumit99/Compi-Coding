@@ -6,7 +6,7 @@
 
 ##### Date: 27th July 2019
 
-***
+
 
 ### Problem1:  _Largest Unique Number_ 
 
@@ -45,7 +45,7 @@ _Note:_
 
 > O(N)
 
-*Note* Refer [largestUniqueNumber.cpp](../largestUniqueNumber.cpp) for code
+**Note** Refer [largestUniqueNumber.cpp](../largestUniqueNumber.cpp) for code
 
 ***
 
@@ -73,7 +73,7 @@ Explanation:
 
 ### Constraints: 
 
-_Note:_
+__Note:__
 
 >1 <= N <= 10^8
 
@@ -85,7 +85,7 @@ _Note:_
 
 > O(log(N))
 
-*Note* Refer [armstrongNumber.cpp](../armstrongNumber.cpp) for code
+**Note** Refer [armstrongNumber.cpp](../armstrongNumber.cpp) for code
 
-***
+
 
