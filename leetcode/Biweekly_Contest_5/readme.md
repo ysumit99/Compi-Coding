@@ -85,7 +85,7 @@ __Note:__
 
 > O(log(N))
 
-**Note** Refer [armstrongNumber.cpp](../armstrongNumber.cpp) for code
+**Note** Refer [armstrongNumber.cpp](https://github.com/ysumit99/Compi-Coding/blob/master/leetcode/Biweekly_Contest_5/armstrongNumber.cpp) for code
 
 
 
