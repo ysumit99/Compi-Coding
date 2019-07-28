@@ -21,4 +21,4 @@ This repo contains my submissions on various online competitive programming plat
 * [**CppCoder**](https://github.com/ysumit99/Compi-Coding/tree/master/CppCoder)
 * [**CodingMedia**](https://github.com/ysumit99/Compi-Coding/tree/master/CodingMedia)
 * [**OtherJudges**](https://github.com/ysumit99/Compi-Coding/tree/master/OtherJudges)
-* [**DSAlgoPrep**](https://github.com/ysumit99/Compi-Coding/tree/master/DSAlgoPrep)
+* [**DSAlgoPrep**](https://github.com/ysumit99/Compi-Coding/tree/master/DsAlgoPrep)
