@@ -3,8 +3,13 @@
 This repo contains my submissions on various online competitive programming platforms.
 
 
-  ## Project Euler
-  
-  [Checkout submissions](https://github.com/ysumit99/Compi-Coding/blob/master/Project_Euler/readme.md)
+  * [**Codechef**]()
+  * [**Codeforces**]()
+  * [**Leetcode**]()
+  * [**Spoj**]()
+  * [**Hackerrank**]()
+  * [**Hackerearth**]()
+  * [**Project Euler**](https://github.com/ysumit99/Compi-Coding/blob/master/Project_Euler/readme.md)
+
 
   
