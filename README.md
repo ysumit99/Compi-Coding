@@ -14,7 +14,6 @@ This repo contains my submissions on various online competitive programming plat
 * [**ProjectEuler**](https://github.com/ysumit99/Compi-Coding/tree/master/ProjectEuler)
 * [**InterviewBit**](https://github.com/ysumit99/Compi-Coding/tree/master/InterviewBit)
 * [**GeeksForGeeks**](https://github.com/ysumit99/Compi-Coding/tree/master/GeeksForGeeks)
-* [**CppCoder**](https://github.com/ysumit99/Compi-Coding/tree/master/CppCoder)
 * [**GoogleCodeJam**](https://github.com/ysumit99/Compi-Coding/tree/master/GoogleCodeJam)
 * [**GoogleKickStart**](https://github.com/ysumit99/Compi-Coding/tree/master/GoogleKickStart)
 * [**FacebookHackerCup**](https://github.com/ysumit99/Compi-Coding/tree/master/FacebookHackerCup)
