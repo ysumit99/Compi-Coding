@@ -1,4 +1,6 @@
 //https://www.codechef.com/AUG19B/problems/MSNSADM1
+//Accepted
+
 #include<bits/stdc++.h>
 
 using namespace std;
