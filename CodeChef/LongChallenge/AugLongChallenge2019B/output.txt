@@ -1,1 +1,9 @@
-WIN
+inserting 5
+inserting 5
+inserting 5
+inserting 5
+inserting 5
+start of set iteration
+5
+end of set iteration
+YES
