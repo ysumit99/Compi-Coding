@@ -1,5 +1,5 @@
 //https://www.codechef.com/AUG19B/problems/ZOMCAV
-//Wrong Answer
+//Accepted
 
 #include<bits/stdc++.h>
 #define ll long long int
@@ -26,38 +26,71 @@ int main(){
     {
         cin >> n;
 
-        //vector<int> radiation(n);
+        vector<int> radiation(n);
+        vector<int> diff(n + 1);
         vector<int> health(n);
-        int radiation; 
-        vector<int> finalRadiation(n,0);
+        vector<int> updatedArray(n);
 
-        for (size_t i = 0; i < n; i++)
-        {
-            cin >> radiation;
-            int minLimit = i + 1 - radiation <= 0 ? 1 : i + 1 - radiation;
-            int maxLimit = i + 1 + radiation > n ? n : i + 1 + radiation;
 
-            for (size_t j = minLimit ; j <= maxLimit; j++)
-                finalRadiation[j-1]++;
-            
-        }
-
-        for (size_t i = 0; i < n; i++)
-            cin >> health[i];
-        
-        sort(health.begin(), health.end());
-        sort(finalRadiation.begin(), finalRadiation.end());
-
-        bool allDead = true;
+        int leftRange = 0, rightRange = 0;
 
         for(int i = 0; i < n; i++)
-            if(health[i] != finalRadiation[i])
-                allDead = false;
-        
-        if(allDead)
-            cout << "YES\n";
-        else
-            cout << "NO\n";
+            {
+                cin >> radiation[i];
+                diff[i] = 0;
+            }
+
+            diff[n] = 0;
+
+            for(int i = 0; i < n; i++)
+                cin >> health[i];
+
+            
+
+            for(int i = 0; i < n; i++)
+                {
+                    leftRange = i - radiation[i] < 0 ? 0 : i - radiation[i]; 
+                    rightRange = i + radiation[i] > n - 1 ? n -1 : i + radiation[i];
+                    
+                    diff[leftRange]++;
+                    diff[rightRange + 1]--;
+                }
+                
+                /**
+                    Checking difference array after the update
+                */
+
+                // for(int i = 0; i < n; i++)
+                //     cout << "diff[" << i << " ] = " <<  diff[i] << endl;
+
+            for(int i = 0; i < n; i++)
+            {
+                if(i == 0)
+                    updatedArray[i] = diff[i];
+                else
+                    updatedArray[i] = updatedArray[i-1] + diff[i];
+            }
+
+          
+           sort(updatedArray.begin(), updatedArray.end());
+           sort(health.begin(), health.end());
+
+            bool healthNotMatching = false;
+            for(int i = 0; i < n; i++)
+                {
+                    //cout << "health = " << health[i] << " | updated = " << updatedArray[i] << endl;
+                    if(health[i] != updatedArray[i])
+                    {
+                        healthNotMatching = true;
+                        break;
+                    }
+                }
+
+                if(!healthNotMatching)
+                    cout << "YES\n";
+                else
+                    cout << "NO\n";
+
 
         
         
