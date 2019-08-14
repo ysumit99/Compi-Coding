@@ -49,19 +49,12 @@ int main(){
 
             for(int i = 0; i < n; i++)
                 {
-                    leftRange = i - radiation[i] < 0 ? 0 : i - radiation[i]; 
-                    rightRange = i + radiation[i] > n - 1 ? n -1 : i + radiation[i];
+                    leftRange = max(0, i - radiation[i]); 
+                    rightRange = min(i + radiation[i], n - 1);
                     
                     diff[leftRange]++;
                     diff[rightRange + 1]--;
                 }
-                
-                /**
-                    Checking difference array after the update
-                */
-
-                // for(int i = 0; i < n; i++)
-                //     cout << "diff[" << i << " ] = " <<  diff[i] << endl;
 
             for(int i = 0; i < n; i++)
             {
@@ -76,15 +69,14 @@ int main(){
            sort(health.begin(), health.end());
 
             bool healthNotMatching = false;
+
             for(int i = 0; i < n; i++)
-                {
-                    //cout << "health = " << health[i] << " | updated = " << updatedArray[i] << endl;
-                    if(health[i] != updatedArray[i])
+                 if(health[i] != updatedArray[i])
                     {
                         healthNotMatching = true;
                         break;
                     }
-                }
+                
 
                 if(!healthNotMatching)
                     cout << "YES\n";
@@ -92,11 +84,7 @@ int main(){
                     cout << "NO\n";
 
 
-        
-        
-        
-
-      
+       
     }
 
     return 0;
