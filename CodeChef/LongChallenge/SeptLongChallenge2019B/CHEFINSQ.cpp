@@ -1,5 +1,5 @@
 //https://www.codechef.com/SEPT19B/problems/CHEFINSQ
-//Wrong Answer
+//Wrong Answer => (only 1 Test case passing) => Possible reason: Integer Overflow! Try BigInteger
 
 #include<bits/stdc++.h>
 #define ll long long int
@@ -63,7 +63,7 @@ int main()
             if(count + freq[i] > k)
                 {
                     //cout << "count + freq[" << i << "] = " << count + freq[i] << "\n";
-                    result = combination(freq[i], count-k); // => nCR
+                    result = combination(freq[i], k-count); // => nCR
                     //cout << "freq[i] = " << freq[i] << " | count-k = " << count-k << " | nCr = " << result << "\n";
                     break;
                 }
