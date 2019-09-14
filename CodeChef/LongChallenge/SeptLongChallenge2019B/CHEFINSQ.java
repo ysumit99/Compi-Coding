@@ -1,5 +1,5 @@
-////https://www.codechef.com/SEPT19B/problems/CHEFINSQ
-//Partially Accepted (70 points)
+//https://www.codechef.com/SEPT19B/problems/CHEFINSQ
+//Accepted
 
 /* package codechef; // don't place package name! */
 
@@ -72,7 +72,7 @@ class Codechef
             while(count < k && i <= 100)
             {
                 count += freq[i];
-                if(count > k)
+                if(count >= k)
                     break;
                 i++;
             }
