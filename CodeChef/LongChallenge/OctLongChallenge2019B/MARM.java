@@ -1,5 +1,6 @@
 //https://www.codechef.com/OCT19B/problems/MARM
-//Wrong Answer
+//Accepted Code
+
 /* package codechef; // don't place package name! */
 
 import java.util.*;
@@ -20,13 +21,13 @@ class Codechef
 		
 		while(t > 0)
 		{
-			int n, a, b;
+			int n;
 			long k;
 			
 			n = sc.nextInt();
 			k = sc.nextLong();
 			
-			Integer arr[] = new Integer[n];
+			int arr[] = new int[n];
 			
 			for(int i = 0; i < n; i++)
 				arr[i] = sc.nextInt();
@@ -38,7 +39,7 @@ class Codechef
 				
 				}
 			
-			if(k >= n/2 && n % 2 == 1)
+			if(n % 2 == 1 && k > n/2)
 			    arr[n/2] = 0;
 			printArray(arr);
 			
@@ -50,12 +51,10 @@ class Codechef
 
 	}
 
-	private static void printArray(Integer[] arr) {
+	private static void printArray(int[] arr) {
 		
-		//System.out.print("At k = " + k + " array => " + "          ");
-		for(Integer i : arr)
+		for(int i : arr)
 			System.out.print(i + " ");
-		System.out.println();
 	}
 
 }
