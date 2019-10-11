@@ -19,6 +19,13 @@ ll combination(ll n, ll r)
     return factorial(n)/(factorial(n-r)*factorial(r));
 }
 
+/**
+* Generate Test Case ===> To be copied from java version latter
+*/
+void generateTestCase(string filePath, int testCount){
+    
+}
+
 int main()
 {
 
