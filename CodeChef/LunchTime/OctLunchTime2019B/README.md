@@ -4,7 +4,7 @@
 
 [Problem link](https://www.codechef.com/LTIME77B/problems/HIT)
 
-[Accepted Solution](https://github.com/ysumit99/Compi-Coding/blob/master/CodeChef/LongChallenge/OctLunchTime2019B/HIT.cpp)
+[Accepted Solution](https://github.com/ysumit99/Compi-Coding/blob/master/CodeChef/LunchTime/OctLunchTime2019B/HIT.cpp)
 
 ### Difficulty: Easy
 
