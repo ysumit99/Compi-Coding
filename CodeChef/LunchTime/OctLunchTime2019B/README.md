@@ -15,6 +15,6 @@
 2.Check for pair of indexes
 {A[n/4], A[n/4 + 1]}, {A[n/2], A[n/2 +1]}, {A[3n/4], A[3n/4 + 1]}
 
-3.If any of these three values are same, print -1.
+3.If any pair has both the values in it with same values , print -1.
 
 4.Else the answer for x,y,z is A[n/4 + 1], A[n/2 + 1], A[3n/4 + 1] (This always ensures x+y+z is max as specified in the question)
