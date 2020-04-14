@@ -1,5 +1,5 @@
 //https://www.codechef.com/LTIME82B/problems/PRFXGD
-//?
+//Accepted
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
 let arr = "";
