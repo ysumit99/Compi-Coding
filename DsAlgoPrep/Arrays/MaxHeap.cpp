@@ -4,9 +4,9 @@ using namespace std;
 void showpq(priority_queue<int> pq){
     priority_queue<int> copypq = pq;
 
-    while(!pq.empty()){
-        cout << pq.top() << endl;
-        pq.pop();
+    while(!copypq.empty()){
+        cout << copypq.top() << endl;
+        copypq.pop();
     }
 }
 
