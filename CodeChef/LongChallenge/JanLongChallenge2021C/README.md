@@ -17,3 +17,8 @@ g++ -D DEBUG [file_name].cpp
 
 [Problem Link](https://www.codechef.com/JAN21C/problems/DECODEIT)
 [Solution Link](DECODEIT.cpp)
+
+## Problem 3: Fair Elections (FAIRELCT)
+
+[Problem Link](https://www.codechef.com/JAN21C/problems/FAIRELCT)
+[Solution Link](FAIRELCT.cpp)
