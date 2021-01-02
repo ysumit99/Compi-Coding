@@ -22,3 +22,8 @@ g++ -D DEBUG [file_name].cpp
 
 [Problem Link](https://www.codechef.com/JAN21C/problems/FAIRELCT)
 [Solution Link](FAIRELCT.cpp)
+
+## Problem 4: Fair Elections (BILLRD)
+
+[Problem Link](https://www.codechef.com/JAN21C/problems/BILLRD)
+[Solution Link](BILLRD.cpp)
