@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define ll long long int
 using namespace std;
 
@@ -7,7 +7,7 @@ ll factorial(ll n)
 {
     ll result = 1;
 
-    while(n >= 1)
+    while (n >= 1)
         result *= n--;
 
     return result;
@@ -16,34 +16,52 @@ ll factorial(ll n)
 /* Combination =>  nCr */
 ll combination(ll n, ll r)
 {
-    return factorial(n)/(factorial(n-r)*factorial(r));
+    return factorial(n) / (factorial(n - r) * factorial(r));
 }
 
+/* generate Random Number in a range */
+int generateRandomNumber(int min, int max)
+{
+    return rand() % (max - min + 1) + min;
+}
 /**
-* Generate Test Case ===> To be copied from java version latter
+* Generate Test Case
 */
-void generateTestCase(string filePath, int testCount){
-    
+void generateTestCases(int t, int N, int K, int elementUpperLimit)
+{
+
+    //Generate Test cases
+    for (int i = 0; i < t; i++)
+    {
+        int randomN = generateRandomNumber(1, N);
+        int randomK = generateRandomNumber(1, K);
+        cout << randomN << " " << randomK << endl;
+
+        for (int j = 0; j < randomN; j++)
+        {
+            cout << generateRandomNumber(1, elementUpperLimit) << " ";
+        }
+        cout << endl;
+    }
 }
 
 int main()
 {
 
-    #ifdef DEBUG
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif
+#ifdef DEBUG
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
 
-    ios_base :: sync_with_stdio(false);
+    ios_base ::sync_with_stdio(false);
     cin.tie(0);
 
     int t;
 
     cin >> t;
 
-    while(t--)
+    while (t--)
     {
-        
     }
     return 0;
 }
