@@ -58,11 +58,11 @@ int main()
     while (t--)
     {
         cin >> n >> k;
-        //cout << "n = " << n << " | k = " << k << endl;
+        cout << "n = " << n << " | k = " << k << endl;
 
         int blockHeight[n];
         //cumulativeHeight[n];
-        vector<int> isUsed(n, 0);
+        //vector<int> isUsed(n, 0);
 
         // for (int i = 0; i < n; i++)
         // {
@@ -80,8 +80,7 @@ int main()
             cin >> blockHeight[i];
             totalHeight += blockHeight[i];
         }
-
-        // cout << "totalHeight = " << totalHeight << endl;
+        cout << "totalHeight = " << totalHeight << " | required height =  " << k << endl;
         if (totalHeight < 2 * k)
         {
             cout << -1 << endl;
@@ -90,7 +89,7 @@ int main()
 
         sort(blockHeight, blockHeight + n, greater<int>());
         int res = 0, smallest = INT_MAX, sum = 0, sum2 = 0, count = 0, count2 = 0;
-        //cout << "totalHeight = " << totalHeight << " | required height =  " << k << endl;
+
         for (int i = 1; i < (1 << n); i++)
         {
             sum = 0;
@@ -98,42 +97,50 @@ int main()
             count = 0;
             //count2 = 0;
             vector<int> isUsed(n, 0);
+            vector<int> tempArr;
 
-            //cout << "Tower 1{ ";
+            cout << "Tower 1{ ";
 
             // Print current subset
             for (int j = 0; j < n; j++)
 
                 if ((i & (1 << j)) > 0)
                 {
-                    //cout << blockHeight[j] << ",";
+                    cout << blockHeight[j] << ",";
                     sum += blockHeight[j];
                     isUsed[j] = 1;
+                    tempArr.push_back(j);
                     count++;
+                    if (sum >= k)
+                    {
+                        break;
+                    }
                 }
-            //cout << " | height = " << sum << " }" << endl;
+            cout << " | height = " << sum << " }" << endl;
 
-            //cout << "Tower 2{ ";
+            cout << "Tower 2{ ";
             if (sum >= k)
             {
+
                 for (int j = 0; j < n; j++)
                 {
                     if (isUsed[j] == 0)
                     {
 
-                        //cout << blockHeight[j] << ",";
+                        cout << blockHeight[j] << ",";
                         sum2 += blockHeight[j];
                         isUsed[j] = 1;
+                        tempArr.push_back(j);
                         count++;
                         if (sum2 >= k)
                             break;
                     }
                 }
 
-                //cout << "tower2 height = " << sum2;
+                cout << "tower2 height = " << sum2;
                 if (sum2 >= k)
                 {
-                    // cout << "tower2  height = " << sum2 << " | tota blocks used = " << count;
+                    cout << "tower2  height = " << sum2 << " | tota blocks used = " << count;
                     if (count < smallest)
                     {
                         smallest = count;
@@ -141,18 +148,26 @@ int main()
                 }
                 else
                 {
-                    //cout << "tower2 not tall enough, height = " << sum2;
+                    cout << "tower2 not tall enough, height = " << sum2 << " | need to reset" << tempArr.size() << " elements";
+                    for (int k = 0; k < tempArr.size(); k++)
+                    {
+                        isUsed[tempArr[k]] = 0;
+                    }
                 }
             }
             else
             {
-                //cout << "tower 1 not tall enough";
+                cout << "tower 1 not tall enough, height = " << sum << " | need to reset" << tempArr.size() << " elements";
+                for (int k = 0; k < tempArr.size(); k++)
+                {
+                    isUsed[tempArr[k]] = 0;
+                }
             }
-            //cout << "}" << endl;
-            isUsed.clear();
+            cout << "}" << endl;
+            //isUsed.clear();
+            tempArr.clear();
         }
-
-        //cout << "final result" << smallest << endl;
+        cout << " result = ";
         if (smallest == INT_MAX)
         {
             cout << -1 << endl;

@@ -58,7 +58,7 @@ int main()
     while (t--)
     {
         cin >> n >> k;
-        //cout << "n = " << n << " | k = " << k << endl;
+        cout << "n = " << n << " | k = " << k << endl;
 
         int blockHeight[n];
         //cumulativeHeight[n];
@@ -81,7 +81,7 @@ int main()
             totalHeight += blockHeight[i];
         }
 
-        // cout << "totalHeight = " << totalHeight << endl;
+        cout << "totalHeight = " << totalHeight << endl;
         if (totalHeight < 2 * k)
         {
             cout << -1 << endl;
@@ -90,10 +90,10 @@ int main()
 
         sort(blockHeight, blockHeight + n, greater<int>());
 
-        // for (int i = 0; i < n; i++)
-        // {
-        //     cout << "blockHeight[" << i << "]=" << blockHeight[i] << endl;
-        // }
+        for (int i = 0; i < n; i++)
+        {
+            cout << "blockHeight[" << i << "]=" << blockHeight[i] << endl;
+        }
 
         // for (int i = n - 1; i >= 0; i--)
         // {
@@ -111,7 +111,7 @@ int main()
         int temp;
         int possibleBlockIndex = -1;
 
-        //cout << "************* tower-1 *************" << endl;
+        cout << "************* tower-1 *************" << endl;
         //tower1
         for (int i = 0; i < n; i++)
         {
@@ -124,14 +124,14 @@ int main()
                     blocksRequired1++;
                     isUsed[possibleBlockIndex] = 1;
                     lostHeight += (height1 - k);
-                    //cout << "possible block being used otherwise additional block is required  at index => [" << possibleBlockIndex << "] with height = " << blockHeight[possibleBlockIndex] << " | heightTillNow = " << height1 << " | heightLost = " << lostHeight << endl;
+                    cout << "possible block being used otherwise additional block is required  at index => [" << possibleBlockIndex << "] with height = " << blockHeight[possibleBlockIndex] << " | heightTillNow = " << height1 << " | heightLost = " << lostHeight << endl;
                     break;
                 }
 
                 height1 += blockHeight[i];
                 blocksRequired1++;
                 isUsed[i] = 1;
-                //cout << "block used at index => [" << i << "] = " << blockHeight[i] << " | heightTillNow = " << height1 << endl;
+                cout << "block used at index => [" << i << "] = " << blockHeight[i] << " | heightTillNow = " << height1 << endl;
             }
             else if (height1 + blockHeight[i] == k)
             {
@@ -139,7 +139,7 @@ int main()
                 height1 += blockHeight[i];
                 blocksRequired1++;
                 isUsed[i] = 1;
-                //cout << "block used at index => [" << i << "] = " << blockHeight[i] << " | FinalHeight = " << height1 << endl;
+                cout << "block used at index => [" << i << "] = " << blockHeight[i] << " | FinalHeight = " << height1 << endl;
                 break;
             }
             else if (height1 + blockHeight[i] > k)
@@ -167,14 +167,14 @@ int main()
                                 isUsed[possibleBlockIndex] = 1;
                                 alternate = true;
                                 lostHeight += (height1 - k);
-                                // cout << "possible block being used otherwise additional block is required  at index => [" << possibleBlockIndex << "] with height = " << blockHeight[possibleBlockIndex] << " | heightTillNow = " << height1 << " | heightLost = " << lostHeight << endl;
+                                cout << "possible block being used otherwise additional block is required  at index => [" << possibleBlockIndex << "] with height = " << blockHeight[possibleBlockIndex] << " | heightTillNow = " << height1 << " | heightLost = " << lostHeight << endl;
                                 break;
                             }
 
                             height1 += blockHeight[temp];
                             blocksRequired1++;
                             isUsed[temp] = 1;
-                            // cout << "block used at index => [" << temp << "] = " << blockHeight[temp] << " | heightTillNow = " << height1 << endl;
+                            cout << "block used at index => [" << temp << "] = " << blockHeight[temp] << " | heightTillNow = " << height1 << endl;
                             temp++;
                         }
                         else if (height1 + blockHeight[temp] == k)
@@ -184,7 +184,7 @@ int main()
                             blocksRequired1++;
                             isUsed[temp] = 1;
                             alternate = true;
-                            // cout << "block used at index => [" << temp << "] = " << blockHeight[temp] << " | FinalHeight = " << height1 << endl;
+                            cout << "block used at index => [" << temp << "] = " << blockHeight[temp] << " | FinalHeight = " << height1 << endl;
                             break;
                         }
                         else if (height1 + blockHeight[temp] > k)
@@ -199,14 +199,14 @@ int main()
                             {
 
                                 // if (possibleBlockIndex == -1)
-                                // {
+                                //{
                                 if (temp == n - 1)
                                 {
                                     height1 += blockHeight[temp];
                                     blocksRequired1++;
                                     isUsed[temp] = 1;
                                     alternate = true;
-                                    //cout << "last possible block being used  at index => [" << temp << "] with height = " << blockHeight[temp] << " | heightTillNow = " << height1 << " | heightLost = " << lostHeight << endl;
+                                    cout << "last possible block being used  at index => [" << temp << "] with height = " << blockHeight[temp] << " | heightTillNow = " << height1 << " | heightLost = " << lostHeight << endl;
                                     break;
                                 }
 
@@ -270,7 +270,7 @@ int main()
                         blocksRequired1++;
                         isUsed[i] = 1;
 
-                        //cout << "last possible block being used  at index => [" << i << "] with height = " << blockHeight[i] << " | heightTillNow = " << height1 << " | heightLost = " << lostHeight << endl;
+                        cout << "last possible block being used  at index => [" << i << "] with height = " << blockHeight[i] << " | heightTillNow = " << height1 << " | heightLost = " << lostHeight << endl;
                         break;
                     }
                     possibleBlockIndex = i;
@@ -297,7 +297,7 @@ int main()
 
         if (height1 < k && possibleBlockIndex != -1 && isUsed[possibleBlockIndex] == 0)
         {
-            //cout << "!!Special case!!" << endl;
+            cout << "!!Special case!!" << endl;
 
             lostHeight += (height1 + blockHeight[possibleBlockIndex] - k);
             if (totalHeight - lostHeight < 2 * k)
@@ -309,11 +309,11 @@ int main()
             height1 += blockHeight[possibleBlockIndex];
             blocksRequired1++;
             isUsed[possibleBlockIndex] = 1;
-            // cout << "possible block being used  at index => [" << possibleBlockIndex << "] = " << blockHeight[possibleBlockIndex] << endl;
+            cout << "possible block being used  at index => [" << possibleBlockIndex << "] = " << blockHeight[possibleBlockIndex] << endl;
         }
 
         //tower2
-        // cout << "************* tower-2 *************" << endl;
+        cout << "************* tower-2 *************" << endl;
         for (int i = 0; i < n; i++)
         {
             if (isUsed[i] == 0 && height2 + blockHeight[i] < k)
@@ -321,14 +321,14 @@ int main()
                 height2 += blockHeight[i];
                 blocksRequired2++;
                 isUsed[i] = 1;
-                //cout << "block used at index => [" << i << "] = " << blockHeight[i] << " | heightTillNow = " << height2 << endl;
+                cout << "block used at index => [" << i << "] = " << blockHeight[i] << " | heightTillNow = " << height2 << endl;
             }
             else if (isUsed[i] == 0 && height2 + blockHeight[i] >= k)
             {
                 height2 += blockHeight[i];
                 blocksRequired2++;
                 isUsed[i] = 1;
-                //cout << "final block used at index => [" << i << "] = " << blockHeight[i] << " | heightTillNow = " << height2 << endl;
+                cout << "final block used at index => [" << i << "] = " << blockHeight[i] << " | heightTillNow = " << height2 << endl;
                 break;
             }
         }
